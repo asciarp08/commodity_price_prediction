@@ -18,10 +18,27 @@
 
      <!-- Main Input For Receiving Query to our ML -->
     <form action="{{ url_for('predict')}}"method="post">
-    	<input type="text" name="Date" placeholder="Date" required="required" />
-      <input type="text" name="Center" placeholder="Center" required="required" />
-		  <input type="text" name="Commodity" placeholder="Commodity" required="required" />
-      <input type="text" name="Region" placeholder="Region" required="required" />
+      <select name="Center" placeholder="Center" required="required" >
+        <option value="lucknow">LUCKNOW</option>
+        <option value="bhopal">BHOPAL</option>
+        <option value="shimla">SHIMLA</option>
+        <option value="delhi">DELHI</option>
+        <option value="jaipur">JAIPUR</option>
+    </select>
+		  <select name="Commodity" placeholder="Commodity" required="required" >
+        <option value="turdal">TurDal</option>
+        <option value="tomato">Tomato</option>
+        <option value="tealoose">Tea Loose</option>
+        <option value="oil">Sunflower Oil</option>
+        <option value="sugar">Sugar</option>
+      </select>
+      <select  name="Region" placeholder="Region" required="required" >
+        <option value="north">NORTH</option>
+        <option value="south">SOUTH</option>
+        <option value="northeast">NORTH EAST</option>
+        <option value="west">WEST</option>
+        <option value="east">EAST</option>
+      </select>
 
       <button type="submit" class="btn btn-primary btn-block btn-large">Predict</button>
     </form>
