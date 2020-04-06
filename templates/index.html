@@ -14,17 +14,16 @@
 
 <body>
  <div class="login">
-	<h1>COMMODITY PRICE PREDICTION</h1>
+	<h3>COMMODITY PRICE PREDICTION</h3>
 
      <!-- Main Input For Receiving Query to our ML -->
     <form action="{{ url_for('predict')}}"method="post">
-      Location <input type='text' name='Center'><br>
-      What do you want to buy/sell? <input type='text' name='Commodity'><br>
-      Region <input type='text' name='Region'><br>
-      <input type='submit' value='Continue'>
+       <input type='text' name='Center' placeholder = 'Location'><br>
+       <input type='text' name='Commodity' placeholder = 'Commodity'><br>
+      <input type='text' name='Region' placeholder="Region"><br>
+      <input type='submit' value='Submit'>
     </form>
 
-   <br>
    <br>
    {{ prediction_text }}
 
