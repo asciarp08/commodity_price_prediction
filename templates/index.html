@@ -3,7 +3,7 @@
 <!--From https://codepen.io/frytyler/pen/EGdtg-->
 <head>
   <meta charset="UTF-8">
-  <title>ML_PROJECT</title>
+  <title>PREDICTION PARTNER</title>
 <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
 <link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
 <link href='https://fonts.googleapis.com/css?family=Hind:300' rel='stylesheet' type='text/css'>
@@ -18,29 +18,10 @@
 
      <!-- Main Input For Receiving Query to our ML -->
     <form action="{{ url_for('predict')}}"method="post">
-      <select name="Center" placeholder="Center" required="required" >
-        <option value="lucknow">LUCKNOW</option>
-        <option value="bhopal">BHOPAL</option>
-        <option value="shimla">SHIMLA</option>
-        <option value="delhi">DELHI</option>
-        <option value="jaipur">JAIPUR</option>
-    </select>
-		  <select name="Commodity" placeholder="Commodity" required="required" >
-        <option value="turdal">TurDal</option>
-        <option value="tomato">Tomato</option>
-        <option value="tealoose">Tea Loose</option>
-        <option value="oil">Sunflower Oil</option>
-        <option value="sugar">Sugar</option>
-      </select>
-      <select  name="Region" placeholder="Region" required="required" >
-        <option value="north">NORTH</option>
-        <option value="south">SOUTH</option>
-        <option value="northeast">NORTH EAST</option>
-        <option value="west">WEST</option>
-        <option value="east">EAST</option>
-      </select>
-
-      <button type="submit" class="btn btn-primary btn-block btn-large">Predict</button>
+      Location <input type='text' name='Center'><br>
+      What do you want to buy/sell? <input type='text' name='Commodity'><br>
+      Region <input type='text' name='Region'><br>
+      <input type='submit' value='Continue'>
     </form>
 
    <br>
