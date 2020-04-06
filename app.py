@@ -42,7 +42,7 @@ def predict():
     prediction = sc_y.inverse_transform(prediction)
     output = round(prediction[0], 2)
 
-    return render_template('index.html', prediction_text='Expected Commodity Price : ₹ {}'.format(output))
+    return render_template('index.html', prediction_text='Expected Price : ₹ {}'.format(output))
     
 @app.route('/predict_api',methods=['POST'])
 def predict_api():
